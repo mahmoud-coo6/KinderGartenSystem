@@ -17,7 +17,7 @@ public class ContainerActivity extends AppCompatActivity {
 
         Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
 //        FragmentsUtil fragmentsUtil = new FragmentsUtil();
-        FragmentsUtil.addFragment(this, R.id.container, new MainMenu(), false);
+        FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
 
 
     }
@@ -26,11 +26,15 @@ public class ContainerActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == android.R.id.home ){
+            getSupportFragmentManager().beginTransaction();
             Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
             FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
+            getSupportFragmentManager().beginTransaction();
         }else  if (item.getItemId() == android.R.id.background){
+            getSupportFragmentManager().beginTransaction();
             Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
             FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
+            getSupportFragmentManager().beginTransaction();
         }
         return super.onOptionsItemSelected(item);
     }

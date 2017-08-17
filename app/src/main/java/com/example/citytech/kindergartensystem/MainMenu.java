@@ -47,7 +47,7 @@ public class MainMenu extends Fragment {
         kid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               FragmentsUtil.replaceFragment(activity,R.id.containerss,new Kid(),true);
+               FragmentsUtil.addFragment(activity,R.id.containerss,new Kid(),true);
             }
         });
 
@@ -55,7 +55,7 @@ public class MainMenu extends Fragment {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentsUtil.replaceFragment(activity,R.id.containerss,new Teacher(),true);
+                FragmentsUtil.addFragment(activity,R.id.containerss,new Teacher(),true);
             }
         });
 
@@ -64,7 +64,7 @@ public class MainMenu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                FragmentsUtil.replaceFragment(activity,R.id.containerss,new Activity(),true);
+                FragmentsUtil.addFragment(activity,R.id.containerss,new Activity(),true);
             }
         });
 
@@ -72,7 +72,7 @@ public class MainMenu extends Fragment {
         classe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentsUtil.replaceFragment(activity,R.id.containerss,new Classe(),true);
+                FragmentsUtil.addFragment(activity,R.id.containerss,new Classe(),true);
             }
         });
         return view;
