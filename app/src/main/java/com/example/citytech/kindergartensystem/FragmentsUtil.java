@@ -12,6 +12,8 @@ import android.support.v7.app.ActionBar;
  */
 
 public class FragmentsUtil {
+
+
     public static void addFragment(FragmentActivity activity , int layout , Fragment fragment, boolean addToBackStack){
 
         FragmentManager fragmentManager = activity.getSupportFragmentManager();

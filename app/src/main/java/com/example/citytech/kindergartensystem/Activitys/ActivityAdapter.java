@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.citytech.kindergartensystem.R;
 
@@ -11,7 +12,7 @@ import com.example.citytech.kindergartensystem.R;
  * Created by Mahmoud Abdo on 8/16/2017.
  */
 
-public class ActivityAdapter extends FragmentPagerAdapter {
+public class ActivityAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
     public ActivityAdapter(Context context,FragmentManager fm) {
