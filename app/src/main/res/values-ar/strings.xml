@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نظام روضة أطفال</string>
+    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
+    <string name="add">إضافة</string>
+    <string name="view">عرض</string>
+    <string name="search">بحث</string>
+    <string name="display_all">عرض الكل</string>
+    <string name="activity">نشاط</string>
+    <string name="kid">طفل</string>
+    <string name="teacher">مدرس</string>
+    <string name="classes">صف دراسي</string>
+    <string name="welcome">مرحبا بكم في نظام\n روضة ميرا</string>
+    <string name="load">جار التحميل ...</string>
+    <string name="arabic">عربى</string>
+    <string name="english">إنجليزي</string>
+    <string name="changeLanuage">اللغة</string>
+
+    <array name="myClasses">
+        <item>المرحلة</item>
+        <item>KG0</item>
+        <item>KG1</item>
+        <item>KG2</item>
+    </array>
+
+</resources>

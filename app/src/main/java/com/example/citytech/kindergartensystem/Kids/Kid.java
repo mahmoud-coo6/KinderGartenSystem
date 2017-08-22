@@ -24,7 +24,7 @@ public class Kid extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.kid, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getActivity().setTitle("Kid");
+        getActivity().setTitle(getString(R.string.kid));
         ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
 
         KidAdapter adapter = new KidAdapter(getActivity(), getFragmentManager());
@@ -41,7 +41,7 @@ public class Kid extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getActivity().setTitle("Kinder Garden System");
+        getActivity().setTitle(getString(R.string.app_name));
 
     }
 }

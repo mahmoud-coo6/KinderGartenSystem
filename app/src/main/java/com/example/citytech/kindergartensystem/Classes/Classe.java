@@ -29,7 +29,7 @@ public class Classe extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.kid, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getActivity().setTitle("Class");
+        getActivity().setTitle(getString(R.string.classes));
         ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
 
         ClassAdapter adapter = new ClassAdapter(getActivity(), getFragmentManager());
@@ -46,7 +46,7 @@ public class Classe extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getActivity().setTitle("Kinder Garden System");
+        getActivity().setTitle(getString(R.string.app_name));
 
     }
 

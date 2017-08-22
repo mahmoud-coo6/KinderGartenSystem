@@ -31,7 +31,7 @@ public class Activity extends Fragment {
         // Inflate the layout for this fragment
         View rootView= inflater.inflate(R.layout.activity, container, false);
 //        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getActivity().setTitle("Activity");
+        getActivity().setTitle(getString(R.string.activity));
         ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
 
         // Create an adapter that knows which fragment should be shown on each page
@@ -62,7 +62,7 @@ public class Activity extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getActivity().setTitle("Kinder Garden System");
+        getActivity().setTitle(getString(R.string.app_name));
 
     }
 }

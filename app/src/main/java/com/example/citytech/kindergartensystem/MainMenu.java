@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.citytech.kindergartensystem.Activitys.Activity;
 import com.example.citytech.kindergartensystem.Classes.Classe;
@@ -41,8 +42,8 @@ public class MainMenu extends Fragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
-        getActivity().setTitle("Kinder Garden System");
-        ImageView kid= (ImageView)view.findViewById(R.id.kids);
+        getActivity().setTitle(getString(R.string.app_name));
+        LinearLayout kid= (LinearLayout) view.findViewById(R.id.kids);
         final FragmentActivity activity=getActivity();
         kid.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +52,7 @@ public class MainMenu extends Fragment {
             }
         });
 
-        Button teacher=(Button)view.findViewById(R.id.teachers);
+        LinearLayout teacher=(LinearLayout)view.findViewById(R.id.teachers);
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +60,7 @@ public class MainMenu extends Fragment {
             }
         });
 
-        Button activitys=(Button)view.findViewById(R.id.activities);
+        LinearLayout activitys=(LinearLayout)view.findViewById(R.id.activities);
         activitys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +69,7 @@ public class MainMenu extends Fragment {
             }
         });
 
-        Button classe=(Button) view.findViewById(R.id.classes);
+        LinearLayout classe=(LinearLayout) view.findViewById(R.id.classes);
         classe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +78,5 @@ public class MainMenu extends Fragment {
         });
         return view;
     }
-
-
 
 }

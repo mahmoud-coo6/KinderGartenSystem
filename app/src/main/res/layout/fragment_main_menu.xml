@@ -13,33 +13,56 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-            <ImageView
-                android:id="@+id/kids"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="0.5"
-                android:src="@drawable/kid_ic"
-                android:gravity="center_horizontal"
-                 />
-
-            <Button
-                android:id="@+id/teachers"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/teacher"
-                android:gravity="center_horizontal" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/kids">
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="140dp"
+                  android:src="@mipmap/ic_child_care_black_48dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kid"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/teachers">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_person_black_48dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teacher"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -48,27 +71,110 @@
             android:orientation="horizontal"
             android:weightSum="1">
 
-            <Button
-                android:id="@+id/activities"
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="16dp"
                 android:layout_weight="0.5"
-                android:background="@drawable/act" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/activities">
 
-            <Button
-                android:id="@+id/classes"
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_local_activity_black_48dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
                 android:layout_weight="0.5"
-                android:background="@drawable/class_room"
-                android:gravity="center_horizontal" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/classes">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_class_black_48dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classes"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
         </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="1">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/kids"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:src="@drawable/kid_ic"-->
+                <!--android:gravity="center_horizontal"-->
+                 <!--/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/teachers"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:background="@drawable/teacher"-->
+                <!--android:gravity="center_horizontal" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="1">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/activities"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:background="@drawable/act" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/classes"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:background="@drawable/class_room"-->
+                <!--android:gravity="center_horizontal" />-->
+        <!--</LinearLayout>-->
 
     </LinearLayout>
 </FrameLayout>

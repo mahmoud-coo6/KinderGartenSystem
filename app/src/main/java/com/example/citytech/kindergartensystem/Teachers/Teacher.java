@@ -31,7 +31,7 @@ public class Teacher extends Fragment {
          View rootView= inflater.inflate(R.layout.fragment_teacher, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
-        getActivity().setTitle("Teacher");
+        getActivity().setTitle(getString(R.string.teacher));
         // Create an adapter that knows which fragment should be shown on each page
         TeacherAdapter adapter = new TeacherAdapter(getActivity(),getFragmentManager());
 
@@ -53,7 +53,7 @@ public class Teacher extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getActivity().setTitle("Kinder Garden System");
+        getActivity().setTitle(getString(R.string.app_name));
 
     }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KinderGartenSystem</string>
+    <string name="app_name">Kinder Garten System</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -7,4 +7,20 @@
     <string name="view">View</string>
     <string name="search">Search</string>
     <string name="display_all">Display All</string>
+    <string name="activity">Activity</string>
+    <string name="classes">Class</string>
+    <string name="kid">Kid</string>
+    <string name="teacher">Teacher</string>
+    <string name="welcome">Welcome To Meera\n KinderGarten System</string>
+    <string name="load">Loading...</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="changeLanuage">Lanuage</string>
+
+    <array name="myClasses">
+        <item>Stage</item>
+        <item>KG0</item>
+        <item>KG1</item>
+        <item>KG2</item>
+    </array>
 </resources>
