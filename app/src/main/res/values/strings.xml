@@ -16,38 +16,51 @@
     <string name="arabic">Arabic</string>
     <string name="english">English</string>
     <string name="changeLanuage">Lanuage</string>
-    <string name="full_name">The child name is quadruple</string>
-    <string name="date_of_dirth">Date of Birth :</string>
-    <string name="original_town">The original town</string>
-    <string name="child_id_number">Child ID Number</string>
-    <string name="scientific_qualification_father">Scientific qualification of the father</string>
-    <string name="father_profession">Father profession</string>
-    <string name="father_id_number">Father ID number</string>
-    <string name="scientific_qualification_mother">Scientific qualification of the mother</string>
-    <string name="mother_profession">Mother profession</string>
-    <string name="child_arrange">Arrange the child in the family</string>
-    <string name="number_family_members">number of family members</string>
+    <string name="full_name">child name quadruple</string>
+    <string name="date_of_dirth">Date of Birth : </string>
+    <string name="original_town">The original city</string>
+    <string name="child_id_number">Child ID</string>
+    <string name="scientific_qualification_father">father Scientific qualification</string>
+    <string name="father_profession">Father job</string>
+    <string name="father_id_number">Father ID</string>
+    <string name="scientific_qualification_mother">mother Scientific qualification</string>
+    <string name="mother_profession">Mother job</string>
+    <string name="child_arrange">child position in the family</string>
+    <string name="number_family_members">number family persons</string>
     <string name="full_address">Full Address</string>
-    <string name="phone">the phone</string>
-    <string name="Mobile_Father">Mobile Father</string>
-    <string name="child_related_questions">Child-related questions:</string>
+    <string name="phone">phone</string>
+    <string name="Mobile_Father">Father Mobile</string>
+    <string name="Mobile_Mother">Mother Mobile</string>
+    <string name="child_related_questions">questions about Child :</string>
     <string name="is_child">Is the child:</string>
-    <string name="joined_kindergarten_before">He joined a kindergarten before</string>
-    <string name="suffers_from_health_problems">He suffers from no health problems</string>
-    <string name="right_hand_used">The right hand is used</string>
-    <string name="left_hand_used">The left hand is used</string>
-    <string name="Requires_speech_specialist">Requires a speech and speech specialist</string>
-    <string name="completed_examination_hearing_before">I have completed examination and hearing before</string>
-    <string name="Share_games_with_friends_siblings">Share games with friends or siblings</string>
-    <string name="hours_child_sit_television">How many hours does a child sit on television?</string>
-    <string name="baby_sleeps_watch">The baby sleeps the watch</string>
+    <string name="joined_kindergarten_before">enroll in another kindergarten</string>
+    <string name="suffers_from_health_problems">suffers from any health problems</string>
+    <string name="right_hand_used">uses his right hand</string>
+    <string name="left_hand_used">uses his left hand</string>
+    <string name="Requires_speech_specialist">need a speech specialist</string>
+    <string name="completed_examination_hearing_before">completed medical examination of hearing and seeing</string>
+    <string name="Share_games_with_friends_siblings">Share his games with other people</string>
+    <string name="hours_child_sit_television">How many hours does child watching TV?</string>
+    <string name="baby_sleeps_watch">child sleep hours</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
-    <string name="Transportation">Transportation   :</string>
+    <string name="Transportation">Transportation :</string>
     <string name="Evening">Evening</string>
     <string name="morning">morning</string>
-    <string name="study_Period">Study Period  : </string>
-
+    <string name="study_Period">Study Period : </string>
+    <string name="day">DD</string>
+    <string name="month">MM</string>
+    <string name="year">YYYY</string>
+    <string name="children_number">number children</string>
+    <string name="id_number">ID number</string>
+    <string name="Permanent_Residence_Address">Permanent Residence Address</string>
+    <string name="email">E-mail</string>
+    <string name="Mobile_number">Mobile number</string>
+    <string name="home_phone">home phone</string>
+    <string name="Specialization">Specialization</string>
+    <string name="Graduation_Year">Graduation Year</string>
+    <string name="University">University</string>
+    <string name="average">average</string>
 
     <array name="myClasses">
         <item>Stage</item>
@@ -55,4 +68,21 @@
         <item>KG1</item>
         <item>KG2</item>
     </array>
+
+        <array name="status">
+            <item>Scientific qualification</item>
+            <item>BA</item>
+            <item>Higher Diploma</item>
+            <item>Average Diploma</item>
+            <item>High School</item>
+        </array>
+
+        <array name="state">
+            <item>Social status</item>
+            <item>Unmarried</item>
+            <item>Married</item>
+            <item>widow</item>
+            <item>absolute</item>
+        </array>
+
 </resources>

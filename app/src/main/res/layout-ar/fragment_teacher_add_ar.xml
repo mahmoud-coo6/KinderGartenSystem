@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/empDateLayout"
-            android:layoutDirection="ltr"
+            android:layoutDirection="rtl"
             android:layout_marginTop="4dp">
 
             <TextView

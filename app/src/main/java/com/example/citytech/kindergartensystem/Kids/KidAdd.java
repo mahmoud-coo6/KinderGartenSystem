@@ -2,9 +2,11 @@ package com.example.citytech.kindergartensystem.Kids;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.citytech.kindergartensystem.R;
 
@@ -13,6 +15,7 @@ import com.example.citytech.kindergartensystem.R;
  */
 
 public class KidAdd extends Fragment {
+    View view;
     public KidAdd() {
         // Required empty public constructor
     }
@@ -20,7 +23,12 @@ public class KidAdd extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.kid_add, container, false);
+         if (getResources().getConfiguration().locale.getLanguage().equals("en")){
+              view= inflater.inflate(R.layout.kid_add, container, false);
+         }else if(getResources().getConfiguration().locale.getLanguage().equals("ar")){
+              view= inflater.inflate(R.layout.kid_add_ar, container, false);
+         }
+        ImageView kidImage=(ImageView)view.findViewById(R.id.kidImg);
+        return view;
     }
 }

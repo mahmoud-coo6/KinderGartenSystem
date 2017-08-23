@@ -14,6 +14,7 @@ import com.example.citytech.kindergartensystem.R;
  */
 public class TeacherAdd extends Fragment {
 
+    View view;
 
     public TeacherAdd() {
         // Required empty public constructor
@@ -24,7 +25,12 @@ public class TeacherAdd extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teacher_add, container, false);
+        if (getResources().getConfiguration().locale.getLanguage().equals("en")){
+            view= inflater.inflate(R.layout.fragment_teacher_add, container, false);
+        }else if(getResources().getConfiguration().locale.getLanguage().equals("ar")) {
+            view = inflater.inflate(R.layout.fragment_teacher_add_ar, container, false);
+        }
+        return view;
     }
 
 }

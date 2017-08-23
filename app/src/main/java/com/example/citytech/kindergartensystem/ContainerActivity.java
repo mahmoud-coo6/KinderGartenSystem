@@ -1,5 +1,6 @@
 package com.example.citytech.kindergartensystem;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -54,11 +55,15 @@ public class ContainerActivity extends AppCompatActivity {
             return true;
         }else if (item.getItemId() == R.id.arabic){
             item.setChecked(true);
+//            Locale.getDefault().setDefault(new Locale("ar"));
             if (!(getResources().getConfiguration().locale.getLanguage()).equals("ar"))
             setLocale("ar");
             return true;
         }else if (item.getItemId() == R.id.english){
             item.setChecked(true);
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
+//            startActivity(intent);
             if (!(getResources().getConfiguration().locale.getLanguage()).equals("en"))
             setLocale("en");
             return true;
@@ -76,6 +81,20 @@ public class ContainerActivity extends AppCompatActivity {
         FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
 
 
+    }
+
+    private static boolean updateResources(Context context, String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+
+        Resources resources = context.getResources();
+
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = locale;
+
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+
+        return true;
     }
 
         public void setLocale(String lang) {

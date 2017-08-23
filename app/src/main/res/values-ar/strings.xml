@@ -16,7 +16,8 @@
     <string name="english">إنجليزي</string>
     <string name="changeLanuage">اللغة</string>
     <string name="full_name">اسم الطفل رباعيا</string>
-    <string name="date_of_dirth">تاريخ الميلاد :</string>
+    <string name="Mobile_Mother">جوال الأم</string>
+    <string name="date_of_dirth">تاريخ الميلاد : </string>
     <string name="original_town">البلدة الأصلية</string>
     <string name="child_id_number">رقم هوية الطفل</string>
     <string name="scientific_qualification_father">المؤهل العلمي للأب</string>
@@ -42,11 +43,39 @@
     <string name="baby_sleeps_watch">ينام الطفل الساعة</string>
     <string name="no">لا</string>
     <string name="yes">نعم</string>
-    <string name="Transportation">مواصلات   :     </string>
+    <string name="Transportation">مواصلات : </string>
     <string name="Evening">مسائي</string>
     <string name="morning">صباحي</string>
-    <string name="study_Period">الفترة الدراسية   :     </string>
+    <string name="study_Period">الفترة الدراسية :  </string>
+    <string name="day">يوم</string>
+    <string name="month">شهر</string>
+    <string name="year">سنة</string>
+    <string name="children_number">عدد الأطفال</string>
+    <string name="id_number">رقم الهوية</string>
+    <string name="Permanent_Residence_Address">عنوان السكن الدائم</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="Mobile_number">رقم الجوال</string>
+    <string name="home_phone">هاتف المنزل</string>
+    <string name="Specialization">التخصص</string>
+    <string name="Graduation_Year">سنة التخرج</string>
+    <string name="University">الجامعة</string>
+    <string name="average">المعدل</string>
 
+    <array name="status">
+    <item>التأهيل العلمي</item>
+    <item>بكالوريوس</item>
+    <item>دبلوم عالي</item>
+    <item>دبلوم متوسط</item>
+    <item>ثانوية عامة</item>
+    </array>
+
+    <array name="state">
+        <item>الحالة الاجتماعية</item>
+        <item>أعزب</item>
+        <item>متزوج/ة</item>
+        <item>أرمل/ة</item>
+        <item>مطلق/ة</item>
+    </array>
 
     <array name="myClasses">
         <item>المرحلة</item>

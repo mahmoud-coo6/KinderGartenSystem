@@ -53,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layoutDirection="ltr"
+                android:layoutDirection="rtl"
                 android:layout_weight="4.8">
 
                 <TextView
@@ -99,10 +99,10 @@
                         android:layout_weight="1.2"
                         android:inputType="number"
                         />
+                </LinearLayout>
+
+
             </LinearLayout>
-
-
-         </LinearLayout>
 
         </LinearLayout>
 
@@ -279,7 +279,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:orientation="vertical"
-            android:layoutDirection="ltr"
+            android:layoutDirection="rtl"
             android:layout_height="wrap_content">
 
             <TextView
@@ -389,13 +389,12 @@
                         android:id="@+id/kidBusYes"
                         android:text="@string/no"
                         android:textColor="@color/black"
-                        android:layout_marginEnd="4dp"/>
+                        android:layout_marginEnd="8dp"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidBusNo"
                         android:text="@string/yes"
-                        android:layout_marginStart="28dp"
                         android:textColor="@color/black"/>
                 </RadioGroup>
 
@@ -411,10 +410,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/study_Period"
                     android:textSize="20sp"
-                    android:textColor="@color/black"
                     android:gravity="start"
+                    android:textColor="@color/black"
                     android:layout_weight="1"/>
-
 
                 <RadioGroup
                     android:layout_width="0dp"
