@@ -29,10 +29,11 @@ public class ContainerActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
          getMenuInflater().inflate(R.menu.menu, menu);
         menus = menu;
-        if (Locale.getDefault().getLanguage().equals("en")){
-            menus.findItem(R.id.english).setChecked(true);
-        }else if(Locale.getDefault().getLanguage().equals("ar")){
+        String CurrentLang = getResources().getConfiguration().locale.getLanguage();
+        if (CurrentLang.equals("ar")){
             menus.findItem(R.id.arabic).setChecked(true);
+        }else if(CurrentLang.equals("en")){
+            menus.findItem(R.id.english).setChecked(true);
         }
         return true;
     }
@@ -53,10 +54,12 @@ public class ContainerActivity extends AppCompatActivity {
             return true;
         }else if (item.getItemId() == R.id.arabic){
             item.setChecked(true);
+            if (!(getResources().getConfiguration().locale.getLanguage()).equals("ar"))
             setLocale("ar");
             return true;
         }else if (item.getItemId() == R.id.english){
             item.setChecked(true);
+            if (!(getResources().getConfiguration().locale.getLanguage()).equals("en"))
             setLocale("en");
             return true;
         }
@@ -67,7 +70,6 @@ public class ContainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
-
 
         Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
 //        FragmentsUtil fragmentsUtil = new FragmentsUtil();

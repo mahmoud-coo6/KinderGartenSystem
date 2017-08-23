@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.citytech.kindergartensystem.Kids.KidAdd">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +27,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:inputType="text"
-                android:hint="اسم الطفل رباعيا" />
+                android:hint="@string/full_name" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -61,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="تاريخ الميلاد : "
+                android:text="@string/date_of_dirth"
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -80,14 +81,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:hint="البلدة الأصلية"
+                android:hint="@string/original_town"
                 android:id="@+id/oldCity"
                 />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/kidId"
-                android:hint="رقم هوية الطفل"
+                android:hint="@string/child_id_number"
                 android:layout_marginStart="4dp"
                 />
         </LinearLayout>
@@ -102,7 +103,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="المؤهل العلمي للأب"
+                android:hint="@string/scientific_qualification_father"
                 android:layout_weight="1.2"
                 android:id="@+id/kidFatherColg"
                 />
@@ -110,7 +111,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="fill"
-                android:hint="مهنة الأب"
+                android:hint="@string/father_profession"
                 android:layout_weight=".8"
                 android:layout_marginStart="4dp"
                 android:id="@+id/kidFatherJob"
@@ -118,7 +119,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="رقم هوية الأب"
+                android:hint="@string/father_id_number"
                 android:layout_weight="1.2"
                 android:layout_marginStart="4dp"
                 android:id="@+id/kidFatherId"
@@ -135,14 +136,14 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="المؤهل العلمي للأم"
+                android:hint="@string/scientific_qualification_mother"
                 android:layout_weight="1"
                 android:id="@+id/kidMotherColg"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="مهنة الأم"
+                android:hint="@string/mother_profession"
                 android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:id="@+id/kidMotherId"
@@ -161,7 +162,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="fill"
-                android:hint="ترتيب الطفل في الأسرة"
+                android:hint="@string/child_arrange"
                 android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:id="@+id/kidFamilyRank"
@@ -169,7 +170,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="عدد أفراد الأسرة"
+                android:hint="@string/number_family_members"
                 android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:id="@+id/kidFamilyNo"
@@ -179,7 +180,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="العنوان كاملا"
+            android:hint="@string/full_address"
             android:id="@+id/kidAddress"/>
 
         <LinearLayout
@@ -190,14 +191,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/kidHomePhone"
                 android:layout_weight="1"
-                android:hint="الهاتف"
+                android:hint="@string/phone"
                 android:layout_marginEnd="4dp"/>
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/kidFatherMobile"
                 android:layout_weight="1"
-                android:hint="جوال الأب"
+                android:hint="@string/Mobile_Father"
                 android:layout_marginEnd="4dp"/>
             <EditText
                 android:layout_width="0dp"
@@ -226,7 +227,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="أسئلة تتعلق بالطفل : "
+                android:text="@string/child_related_questions"
                 android:textColor="@color/Red"
                 android:padding="4dp"
                 android:textSize="20sp"
@@ -235,7 +236,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="هل الطفل : "
+                android:text="@string/is_child"
                 android:textSize="16sp"
                 android:textColor="@color/Darkblue"/>
 
@@ -243,42 +244,42 @@
                 android:id="@+id/kidQuestion1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="التحق بروضة من قبل"
+                android:text="@string/joined_kindergarten_before"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="يعاني من اي مشاكل صحية"
+                android:text="@string/suffers_from_health_problems"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="يستخدم اليد اليمنى"
+                android:text="@string/right_hand_used"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="يستخدم اليد اليسرى"
+                android:text="@string/left_hand_used"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="يحتاج لأخصائي نطق وتخاطب"
+                android:text="@string/Requires_speech_specialist"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="أتم فحص النظر والسمع من قبل"
+                android:text="@string/completed_examination_hearing_before"
                 />
             <CheckBox
                 android:id="@+id/kidQuestion7"
                 android:layout_width="wrap_content"
-                android:text=" يشارك ألعابه مع أصدقائه أو إخوته"
+                android:text="@string/Share_games_with_friends_siblings"
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -289,14 +290,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/kidQuestion8"
                 android:layout_weight=".6"
-                android:hint="كم ساعة يجلس الطفل على التلفاز"
+                android:hint="@string/hours_child_sit_television"
                 android:textColor="@color/black"/>
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:id="@+id/kidQuestion9"
-                android:hint="ينام الطفل الساعة"
+                android:hint="@string/baby_sleeps_watch"
                 android:layout_marginStart="4dp"/>
             </LinearLayout>
 
@@ -316,21 +317,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidBusYes"
-                        android:text="لا"
+                        android:text="@string/no"
                         android:textColor="@color/black"
                         android:layout_marginEnd="4dp"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidBusNo"
-                        android:text="نعم"
+                        android:text="@string/yes"
                         android:textColor="@color/black"/>
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="مواصلات   :     "
+                    android:text="@string/Transportation"
                     android:textSize="20sp"
                     android:gravity="center_horizontal"
                     android:textColor="@color/black"
@@ -354,21 +355,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidStudPeriMo"
-                        android:text="مسائي"
+                        android:text="@string/Evening"
                         android:textColor="@color/black"
                         android:layout_marginEnd="4dp"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidStudPeriEv"
-                        android:text="صباحي"
+                        android:text="@string/morning"
                         android:textColor="@color/black"/>
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="الفترة الدراسية   :     "
+                    android:text="@string/study_Period"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_weight="1"/>
@@ -376,12 +377,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
-
-
-
-
 
     </LinearLayout>
 </ScrollView>

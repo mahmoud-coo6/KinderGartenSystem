@@ -16,6 +16,38 @@
     <string name="arabic">Arabic</string>
     <string name="english">English</string>
     <string name="changeLanuage">Lanuage</string>
+    <string name="full_name">The child name is quadruple</string>
+    <string name="date_of_dirth">Date of Birth :</string>
+    <string name="original_town">The original town</string>
+    <string name="child_id_number">Child ID Number</string>
+    <string name="scientific_qualification_father">Scientific qualification of the father</string>
+    <string name="father_profession">Father profession</string>
+    <string name="father_id_number">Father ID number</string>
+    <string name="scientific_qualification_mother">Scientific qualification of the mother</string>
+    <string name="mother_profession">Mother profession</string>
+    <string name="child_arrange">Arrange the child in the family</string>
+    <string name="number_family_members">number of family members</string>
+    <string name="full_address">Full Address</string>
+    <string name="phone">the phone</string>
+    <string name="Mobile_Father">Mobile Father</string>
+    <string name="child_related_questions">Child-related questions:</string>
+    <string name="is_child">Is the child:</string>
+    <string name="joined_kindergarten_before">He joined a kindergarten before</string>
+    <string name="suffers_from_health_problems">He suffers from no health problems</string>
+    <string name="right_hand_used">The right hand is used</string>
+    <string name="left_hand_used">The left hand is used</string>
+    <string name="Requires_speech_specialist">Requires a speech and speech specialist</string>
+    <string name="completed_examination_hearing_before">I have completed examination and hearing before</string>
+    <string name="Share_games_with_friends_siblings">Share games with friends or siblings</string>
+    <string name="hours_child_sit_television">How many hours does a child sit on television?</string>
+    <string name="baby_sleeps_watch">The baby sleeps the watch</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="Transportation">Transportation   :</string>
+    <string name="Evening">Evening</string>
+    <string name="morning">morning</string>
+    <string name="study_Period">Study Period  : </string>
+
 
     <array name="myClasses">
         <item>Stage</item>

@@ -15,6 +15,38 @@
     <string name="arabic">عربى</string>
     <string name="english">إنجليزي</string>
     <string name="changeLanuage">اللغة</string>
+    <string name="full_name">اسم الطفل رباعيا</string>
+    <string name="date_of_dirth">تاريخ الميلاد :</string>
+    <string name="original_town">البلدة الأصلية</string>
+    <string name="child_id_number">رقم هوية الطفل</string>
+    <string name="scientific_qualification_father">المؤهل العلمي للأب</string>
+    <string name="father_profession">مهنة الأب</string>
+    <string name="father_id_number">رقم هوية الأب</string>
+    <string name="scientific_qualification_mother">المؤهل العلمي للأم</string>
+    <string name="mother_profession">مهنة الأم</string>
+    <string name="child_arrange">ترتيب الطفل في الأسرة</string>
+    <string name="number_family_members">عدد أفراد الأسرة</string>
+    <string name="full_address">العنوان كاملا</string>
+    <string name="phone">الهاتف</string>
+    <string name="Mobile_Father">جوال الأب</string>
+    <string name="child_related_questions">أسئلة تتعلق بالطفل : </string>
+    <string name="is_child">هل الطفل : </string>
+    <string name="joined_kindergarten_before">التحق بروضة من قبل</string>
+    <string name="suffers_from_health_problems">يعاني من اي مشاكل صحية</string>
+    <string name="right_hand_used">يستخدم اليد اليمنى</string>
+    <string name="left_hand_used">يستخدم اليد اليسرى</string>
+    <string name="Requires_speech_specialist">يحتاج لأخصائي نطق وتخاطب</string>
+    <string name="completed_examination_hearing_before">أتم فحص النظر والسمع من قبل</string>
+    <string name="Share_games_with_friends_siblings"> يشارك ألعابه مع أصدقائه أو إخوته</string>
+    <string name="hours_child_sit_television">كم ساعة يجلس الطفل على التلفاز</string>
+    <string name="baby_sleeps_watch">ينام الطفل الساعة</string>
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+    <string name="Transportation">مواصلات   :     </string>
+    <string name="Evening">مسائي</string>
+    <string name="morning">صباحي</string>
+    <string name="study_Period">الفترة الدراسية   :     </string>
+
 
     <array name="myClasses">
         <item>المرحلة</item>
