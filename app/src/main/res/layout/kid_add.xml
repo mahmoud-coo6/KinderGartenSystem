@@ -24,7 +24,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/kidNameTIET"
+            android:id="@+id/kidName"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kidDateLayout"
-            android:layout_alignEnd="@id/kidNameTIET"
+            android:layout_alignEnd="@id/kidName"
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp">
