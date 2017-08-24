@@ -26,6 +26,7 @@ public class ContainerActivity extends AppCompatActivity {
     Locale myLocale;
     Configuration config ;
     Menu menus;
+    Fragment fragment;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
          getMenuInflater().inflate(R.menu.menu, menu);
@@ -41,34 +42,35 @@ public class ContainerActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == android.R.id.home ){
-            getSupportFragmentManager().beginTransaction();
-            Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
-            FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
-            getSupportFragmentManager().beginTransaction();
-            return true;
-        }else  if (item.getItemId() == android.R.id.background){
-            getSupportFragmentManager().beginTransaction();
-            Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
-            FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
-            getSupportFragmentManager().beginTransaction();
-            return true;
-        }else if (item.getItemId() == R.id.arabic){
-            item.setChecked(true);
-//            Locale.getDefault().setDefault(new Locale("ar"));
-            if (!(getResources().getConfiguration().locale.getLanguage()).equals("ar"))
-            setLocale("ar");
-            return true;
-        }else if (item.getItemId() == R.id.english){
-            item.setChecked(true);
-//            Intent intent = new Intent(Intent.ACTION_MAIN);
-//            intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
-//            startActivity(intent);
-            if (!(getResources().getConfiguration().locale.getLanguage()).equals("en"))
-            setLocale("en");
-            return true;
+        switch (item.getItemId()){
+            case android.R.id.home:
+                getSupportFragmentManager().beginTransaction();
+                 fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
+                FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
+                getSupportFragmentManager().beginTransaction();
+                return true;
+
+            case android.R.id.background:
+                getSupportFragmentManager().beginTransaction();
+                 fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
+                FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
+                getSupportFragmentManager().beginTransaction();
+                return true;
+
+            case R.id.arabic:
+                item.setChecked(true);
+                if (!(getResources().getConfiguration().locale.getLanguage()).equals("ar"))
+                    setLocale("ar");
+                return true;
+
+            case R.id.english:
+                item.setChecked(true);
+                if (!(getResources().getConfiguration().locale.getLanguage()).equals("en"))
+                    setLocale("en");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-       return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -77,7 +79,6 @@ public class ContainerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_container);
 
         Fragment fragment = (MainMenu) getSupportFragmentManager().findFragmentById(R.id.container);
-//        FragmentsUtil fragmentsUtil = new FragmentsUtil();
         FragmentsUtil.replaceFragment(this, R.id.container, new MainMenu(), false);
 
 
@@ -104,30 +105,7 @@ public class ContainerActivity extends AppCompatActivity {
         Configuration conf = res.getConfiguration();
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
-//        Intent refresh = new Intent(this,MainActivity.class);
-//        startActivity(refresh);
             startActivity(getIntent());
             finish();
     }
-//    @Override
-//    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-//        super.onCreateContextMenu(menu, v, menuInfo);
-//        menu.add(0, R.menu.languages, 0, R.string.changeLanuage);
-//    }
-//
-//    @Override
-//    public boolean onContextItemSelected(MenuItem item) {
-//
-//        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-//
-//
-//        int id = item.getItemId();
-//        switch (id){
-//            case R.id.arabic:
-//                Toast.makeText(this, "arabic", Toast.LENGTH_SHORT).show();
-//                AdapterView.AdapterContextMenuInfo infos = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-//                break;
-//        }
-//        return super.onContextItemSelected(item);
-//    }
 }
