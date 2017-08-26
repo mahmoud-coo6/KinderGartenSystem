@@ -39,19 +39,19 @@ public class TeacherAdd extends Fragment {
         EditText empName,empBDday,empBDmonth,empBDyear,empChildNo,empAddress,empEmail,empPhone,empHomePhone,
                 empUniSpec,empGraYear,empUniversity,empRank;
 
-        empName=(EditText) view.findViewById(R.id.empName);
-        empBDday=(EditText) view.findViewById(R.id.empBDday);
-        empBDmonth=(EditText) view.findViewById(R.id.empBDmonth);
-        empBDyear=(EditText) view.findViewById(R.id.empBDyear);
-        empChildNo=(EditText) view.findViewById(R.id.empChildNo);
-        empAddress=(EditText) view.findViewById(R.id.empAddress);
-        empEmail=(EditText) view.findViewById(R.id.empEmail);
-        empPhone=(EditText) view.findViewById(R.id.empPhone);
-        empHomePhone=(EditText) view.findViewById(R.id.empHomePhone);
-        empUniSpec=(EditText) view.findViewById(R.id.empUniSpec);
-        empGraYear=(EditText) view.findViewById(R.id.empGraYear);
-        empUniversity=(EditText) view.findViewById(R.id.empUniversity);
-        empRank=(EditText) view.findViewById(R.id.empRank);
+//        empName=(EditText) view.findViewById(R.id.empName);
+//        empBDday=(EditText) view.findViewById(R.id.empBDday);
+//        empBDmonth=(EditText) view.findViewById(R.id.empBDmonth);
+//        empBDyear=(EditText) view.findViewById(R.id.empBDyear);
+//        empChildNo=(EditText) view.findViewById(R.id.empChildNo);
+//        empAddress=(EditText) view.findViewById(R.id.empAddress);
+//        empEmail=(EditText) view.findViewById(R.id.empEmail);
+//        empPhone=(EditText) view.findViewById(R.id.empPhone);
+//        empHomePhone=(EditText) view.findViewById(R.id.empHomePhone);
+//        empUniSpec=(EditText) view.findViewById(R.id.empUniSpec);
+//        empGraYear=(EditText) view.findViewById(R.id.empGraYear);
+//        empUniversity=(EditText) view.findViewById(R.id.empUniversity);
+//        empRank=(EditText) view.findViewById(R.id.empRank);
 
         return view;
     }

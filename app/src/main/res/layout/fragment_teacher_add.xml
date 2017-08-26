@@ -20,73 +20,87 @@
             android:clickable="true"
             app:srcCompat="@color/colorPrimaryDark"
             />
-
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/black"
-                android:hint="@string/full_name"
-                android:id="@+id/empName"/>
-
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:hint="@string/full_name"
+            android:id="@+id/empNameTIET"/>
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/empDateLayout"
-            android:layoutDirection="ltr"
-            android:layout_marginTop="4dp">
-
+            android:layout_marginTop="4dp"
+            android:layoutDirection="ltr">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/date_of_dirth"
                 android:layout_gravity="center"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:layout_weight="3" />
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5">
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/empBDday"
-                    android:hint="@string/day"
-                    android:inputType="number"
-                    android:layout_weight="1.5" />
-
-            </android.support.design.widget.TextInputLayout>
-
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/empBDmonth"
-                android:hint="@string/month"
-                android:layout_weight="1.5"
-                android:inputType="number"
+                android:layout_weight="3"
                 />
 
-            <EditText
+            <LinearLayout
                 android:layout_width="0dp"
+                android:layout_weight="6"
                 android:layout_height="wrap_content"
-                android:id="@+id/empBDyear"
-                android:hint="@string/year"
-                android:layout_weight="3"
-                android:inputType="number" />
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    >
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/empBDdayTIET"
+                        android:hint="@string/day"
+                        android:inputType="number"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/empBDmonthTIET"
+                        android:hint="@string/month"
+                        android:inputType="number"
+                        />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/empBDyearTIET"
+                        android:hint="@string/year"
+                        android:inputType="number"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,12 +109,18 @@
             <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/empStat"
+                android:id="@+id/empState"
                 android:layout_weight="1"
-                android:padding="4dp"
+                android:padding="8dp"
                 android:layout_gravity="center"
-                android:entries="@array/status"
+                android:entries="@array/state"
                 />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                >
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -108,112 +128,172 @@
                 android:inputType="text"
                 android:layout_marginStart="4dp"
                 android:id="@+id/empChildNo"
-                android:visibility="gone"
-                android:layout_weight="1"/>
+                />
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
-        <EditText
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="@string/id_number"
-            android:id="@+id/empId"
+            android:id="@+id/empIdTIET"
             android:inputType="number"
             android:textColor="@color/black"
             />
-        <EditText
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:hint="@string/Permanent_Residence_Address"
-            android:id="@+id/empAddress"
+            android:id="@+id/empAddressTIET"
             android:textColor="@color/black"
-            android:inputType="text"/>
-        <EditText
+            android:inputType="text"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/empEmail"
+            android:id="@+id/empEmailTIET"
             android:layout_marginTop="4dp"
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:hint="@string/email"
             />
+        </android.support.design.widget.TextInputLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="4dp"
             >
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Mobile_number"
                 android:layout_marginEnd="4dp"
-                android:layout_weight="1"
-                android:id="@+id/empPhone"
+                android:id="@+id/empPhoneTIET"
                 android:inputType="number"
                 />
-            <EditText
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/home_phone"
                 android:layout_weight="1"
+                >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/home_phone"
                 android:layout_marginStart="4dp"
-                android:id="@+id/empHomePhone"
+                android:id="@+id/empHomePhoneTIET"
                 android:inputType="number"
                 />
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
+
             <Spinner
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:id="@+id/empDeg"
-                android:entries="@array/state"
-                android:layout_weight="1.2"
-            />
-            <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/empUniSpec"
+                android:layout_weight="1.5"
+                android:entries="@array/status"
+                android:padding="8dp"
+                android:layout_gravity="center"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/empUniSpecTIET"
                 android:hint="@string/Specialization"
                 android:inputType="text"
                 />
-            <EditText
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/empGraYear"
+                >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/empGraYearTIET"
                 android:hint="@string/Graduation_Year"
                 android:inputType="number"
                 />
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/University"
                 android:layout_marginEnd="4dp"
-                android:id="@+id/empUniversity"
+                android:id="@+id/empUniversityTIET"
                 android:inputType="text"
-                android:layout_weight="1"
                 />
-            <EditText
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/average"
                 android:layout_marginStart="4dp"
-                android:id="@+id/empRank"
-                android:inputType="numberDecimal"/>
+                android:id="@+id/empRankTIET"
+                android:inputType="numberDecimal"
+                />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
