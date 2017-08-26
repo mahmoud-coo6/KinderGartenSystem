@@ -21,13 +21,19 @@
             app:srcCompat="@color/colorPrimaryDark"
             />
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/black"
-            android:hint="@string/full_name"
-            android:id="@+id/empName"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"
+                android:hint="@string/full_name"
+                android:id="@+id/empName"/>
+
+        </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,6 +41,7 @@
             android:id="@+id/empDateLayout"
             android:layoutDirection="ltr"
             android:layout_marginTop="4dp">
+
 
             <TextView
                 android:layout_width="0dp"
@@ -45,15 +52,22 @@
                 android:textColor="@color/black"
                 android:layout_weight="3" />
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/empBDday"
-                android:hint="@string/day"
-                android:inputType="number"
-                android:layout_weight="1.5"
+                android:layout_weight="1.5">
 
-                />
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/empBDday"
+                    android:hint="@string/day"
+                    android:inputType="number"
+                    android:layout_weight="1.5" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -151,8 +165,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
             <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

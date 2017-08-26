@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.citytech.kindergartensystem.Kids.KidAdd">
-
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,34 +18,38 @@
             android:clickable="true"
             app:srcCompat="@color/colorPrimaryDark"
             />
-
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/kidName"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:inputType="text"
-            android:textColor="@color/black"
-            android:hint="@string/full_name" />
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidNameTIET"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:hint="@string/full_name"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kidDateLayout"
-            android:layout_alignEnd="@id/kidName"
+            android:layout_alignEnd="@id/kidNameTIET"
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp">
-
             <Spinner
                 android:layout_width="0dp"
                 android:entries="@array/myClasses"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/kidDateLayout"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -66,6 +68,7 @@
                     android:textColor="@color/black"
                     android:id="@+id/date_birth"
                     android:layout_weight="2"
+                    android:gravity="bottom"
                     android:textDirection="inherit"/>
 
                 <LinearLayout
@@ -74,33 +77,49 @@
                     android:orientation="horizontal"
                     android:layout_weight="2.8">
 
-                    <EditText
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/kidBDday"
-                        android:hint="@string/day"
-                        android:inputType="number"
-                        android:layout_weight=".8"
+                        android:layout_weight=".6">
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/kidBDdayTIET"
+                            android:hint="@string/day"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            />
+                    </android.support.design.widget.TextInputLayout>
 
-                        />
-                    <EditText
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/kidBDmonth"
-                        android:hint="@string/month"
-                        android:layout_weight=".8"
-                        android:inputType="number"
-                        />
-                    <EditText
+                        android:layout_weight=".8">
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/kidBDmonthTIET"
+                            android:hint="@string/month"
+                            android:maxLength="2"
+                            android:inputType="number"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/kidBDyear"
-                        android:hint="@string/year"
-                        android:layout_weight="1.2"
-                        android:inputType="number"
-                        />
+                        android:layout_weight="1">
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/kidBDyearTIET"
+                            android:maxLength="4"
+                            android:hint="@string/year"
+                            android:inputType="number"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -114,153 +133,235 @@
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp">
-            <EditText
-                android:layout_width="wrap_content"
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:hint="@string/original_town"
-                android:id="@+id/oldCity"
-                />
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:hint="@string/original_town"
+                    android:id="@+id/oldCityTIET"
+                    android:maxLength="15"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidIdTIET"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="@string/child_id_number"
+                    android:layout_marginStart="4dp"
+                    android:maxLength="9"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                >
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/scientific_qualification_father"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:id="@+id/kidFatherColgTIET"
+                    android:maxLength="15"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/father_profession"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/kidFatherJobTIET"
+                    android:maxLength="15"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/father_id_number"
+                    android:inputType="number"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/kidFatherIdTIET"
+                    android:maxLength="9"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/scientific_qualification_mother"
+                    android:id="@+id/kidMotherColgTIET"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mother_profession"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/kidMotherJobTIET"
+                    android:inputType="text"
+                    android:maxLength="9"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill"
+                    android:hint="@string/child_arrange"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/kidFamilyRankTIET"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/number_family_members"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/kidFamilyNoTIET"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/kidId"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:hint="@string/child_id_number"
-                android:layout_marginStart="4dp"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp">
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="fill"
-                android:hint="@string/scientific_qualification_father"
+                android:hint="@string/full_address"
+                android:id="@+id/kidAddressTIET"
                 android:inputType="text"
-                android:textColor="@color/black"
-                android:layout_weight="1.2"
-                android:id="@+id/kidFatherColg"
+                android:singleLine="true"
                 />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/father_profession"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:layout_weight=".8"
-                android:layout_marginStart="4dp"
-                android:id="@+id/kidFatherJob"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/child_id_number"
-                android:inputType="number"
-                android:layout_weight="1.2"
-                android:layout_marginStart="4dp"
-                android:id="@+id/kidFatherId"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp">
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/scientific_qualification_mother"
-                android:layout_weight="1"
-                android:id="@+id/kidMotherColg"
-                android:inputType="text"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/mother_profession"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:id="@+id/kidMotherJob"
-                android:inputType="text"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp">
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="fill"
-                android:hint="@string/child_arrange"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:id="@+id/kidFamilyRank"
-                android:inputType="number"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/number_family_members"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:id="@+id/kidFamilyNo"
-                android:inputType="number"
-                />
-        </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/full_address"
-            android:id="@+id/kidAddress"
-            android:inputType="text"
-            />
+        </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/kidHomePhone"
-                android:layout_weight="1"
-                android:hint="@string/phone"
-                android:layout_marginEnd="4dp"
-                android:inputType="number"/>
-            <EditText
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidHomePhoneTIET"
+                    android:hint="@string/phone"
+                    android:layout_marginEnd="4dp"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/kidFatherMobile"
-                android:layout_weight="1"
-                android:hint="@string/Mobile_Father"
-                android:layout_marginEnd="4dp"
-                android:inputType="number"/>
-            <EditText
+                android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidFatherMobileTIET"
+                    android:hint="@string/Mobile_Father"
+                    android:maxLength="7"
+                    android:layout_marginEnd="4dp"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/kidMotherMobile"
-                android:layout_weight="1"
-                android:hint="@string/Mobile_Mother"
-                android:inputType="number"/>
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidMotherMobileTIET"
+                    android:hint="@string/Mobile_Mother"
+                    android:maxLength="7"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
 
 
@@ -279,8 +380,8 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:orientation="vertical"
-            android:layoutDirection="rtl"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl">
 
             <TextView
                 android:layout_width="match_parent"
@@ -344,22 +445,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <EditText
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/kidQuestion8"
-                    android:layout_weight=".6"
-                    android:hint="@string/hours_child_sit_television"
-                    android:textColor="@color/black"
-                    android:inputType="number"/>
-                <EditText
+                    android:layout_weight=".6">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidQuestion8TIET"
+                        android:hint="@string/hours_child_sit_television"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        android:maxLength="2"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:id="@+id/kidQuestion9"
-                    android:hint="@string/baby_sleeps_watch"
-                    android:layout_marginStart="4dp"
-                    android:inputType="text"/>
+                    android:layout_weight=".4">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidQuestion9TIET"
+                        android:maxLength="2"
+                        android:hint="@string/baby_sleeps_watch"
+                        android:layout_marginStart="4dp"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -382,14 +496,14 @@
                     android:orientation="horizontal"
                     android:layout_weight="1"
                     android:id="@+id/kidBusChoice"
-                    android:gravity="start">
+                    android:gravity="center">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/kidBusYes"
                         android:text="@string/no"
                         android:textColor="@color/black"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="4dp"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -410,7 +524,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/study_Period"
                     android:textSize="20sp"
-                    android:gravity="start"
                     android:textColor="@color/black"
                     android:layout_weight="1"/>
 
@@ -420,7 +533,7 @@
                     android:orientation="horizontal"
                     android:layout_weight="1"
                     android:id="@+id/kidStudPeriChoice"
-                    android:gravity="start">
+                    android:gravity="center">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -439,8 +552,6 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
-
-
-
 </ScrollView>

@@ -1,8 +1,10 @@
 package com.example.citytech.kindergartensystem.Kids;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,18 +16,23 @@ import android.widget.RadioGroup;
 
 import com.example.citytech.kindergartensystem.R;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
- * Created by Mahmoud Abdo on 8/15/2017.
+ * Created by Abdulazeez Alhayek and Mahmoud Abdo 8/15/2017.
  */
 
 public class KidAdd extends Fragment {
-    View view;
+    private Bitmap img;
+    private ImageView kidImg;
+
     public KidAdd() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+         View view;
         switch (getResources().getConfiguration().locale.getLanguage()){
             case "en" :
                 view= inflater.inflate(R.layout.kid_add, container, false);
@@ -37,33 +44,33 @@ public class KidAdd extends Fragment {
                 return null;
         }
 
-        ImageView kidImg=(ImageView)view.findViewById(R.id.kidImg);
-        EditText kidName,kidBDday,kidBDmonth,kidBDyear,oldCity,kidId,kidFatherColg,kidFatherJob,
-                kidFamilyRank,kidFatherId,kidMotherColg,kidMotherJob,kidFamilyNo,kidAddress,
-                kidHomePhone,kidFatherMobile,kidMotherMobile,kidQuestion8,kidQuestion9;
+
+        EditText kidNameTIET,kidBDdayTIET,kidBDmonthTIET,kidBDyearTIET,oldCityTIET,kidIdTIET,kidFatherColgTIET,kidFatherJobTIET,
+                kidFamilyRankTIET,kidFatherIdTIET,kidMotherColgTIET,kidMotherJobTIET,kidFamilyNoTIET,kidAddressTIET,
+                kidHomePhoneTIET,kidFatherMobileTIET,kidMotherMobileTIET,kidQuestion8TIET,kidQuestion9TIET;
         CheckBox kidQuestion1,kidQuestion2,kidQuestion3,kidQuestion4,kidQuestion5,kidQuestion6,kidQuestion7;
         RadioButton kidBusYes,kidBusNo,kidStudPeriMo,kidStudPeriEv;
         RadioGroup kidBusChoice,kidStudPeriChoice;
 
-        kidName=(EditText) view.findViewById(R.id.kidName);
-        kidBDday=(EditText) view.findViewById(R.id.kidBDday);
-        kidBDmonth=(EditText) view.findViewById(R.id.kidBDmonth);
-        kidBDyear=(EditText) view.findViewById(R.id.kidBDyear);
-        oldCity=(EditText) view.findViewById(R.id.oldCity);
-        kidId=(EditText) view.findViewById(R.id.kidId);
-        kidFatherColg=(EditText) view.findViewById(R.id.kidFatherColg);
-        kidFatherJob=(EditText) view.findViewById(R.id.kidFatherJob);
-        kidFamilyRank=(EditText) view.findViewById(R.id.kidFamilyRank);
-        kidFatherId=(EditText) view.findViewById(R.id.kidFatherId);
-        kidMotherColg=(EditText) view.findViewById(R.id.kidMotherColg);
-        kidMotherJob=(EditText) view.findViewById(R.id.kidMotherJob);
-        kidFamilyNo=(EditText) view.findViewById(R.id.kidFamilyNo);
-        kidAddress=(EditText) view.findViewById(R.id.kidAddress);
-        kidHomePhone=(EditText) view.findViewById(R.id.kidHomePhone);
-        kidFatherMobile=(EditText) view.findViewById(R.id.kidFatherMobile);
-        kidMotherMobile=(EditText) view.findViewById(R.id.kidMotherMobile);
-        kidQuestion8=(EditText) view.findViewById(R.id.kidQuestion8);
-        kidQuestion9=(EditText) view.findViewById(R.id.kidQuestion9);
+        kidNameTIET=(EditText) view.findViewById(R.id.kidNameTIET);
+        kidBDdayTIET=(EditText) view.findViewById(R.id.kidBDdayTIET);
+        kidBDmonthTIET=(EditText) view.findViewById(R.id.kidBDmonthTIET);
+        kidBDyearTIET=(EditText) view.findViewById(R.id.kidBDyearTIET);
+        oldCityTIET=(EditText) view.findViewById(R.id.oldCityTIET);
+        kidIdTIET=(EditText) view.findViewById(R.id.kidIdTIET);
+        kidFatherColgTIET=(EditText) view.findViewById(R.id.kidFatherColgTIET);
+        kidFatherJobTIET=(EditText) view.findViewById(R.id.kidFatherJobTIET);
+        kidFamilyRankTIET=(EditText) view.findViewById(R.id.kidFamilyRankTIET);
+        kidFatherIdTIET=(EditText) view.findViewById(R.id.kidFatherIdTIET);
+        kidMotherColgTIET=(EditText) view.findViewById(R.id.kidMotherColgTIET);
+        kidMotherJobTIET=(EditText) view.findViewById(R.id.kidMotherJobTIET);
+        kidFamilyNoTIET=(EditText) view.findViewById(R.id.kidFamilyNoTIET);
+        kidAddressTIET=(EditText) view.findViewById(R.id.kidAddressTIET);
+        kidHomePhoneTIET=(EditText) view.findViewById(R.id.kidHomePhoneTIET);
+        kidFatherMobileTIET=(EditText) view.findViewById(R.id.kidFatherMobileTIET);
+        kidMotherMobileTIET=(EditText) view.findViewById(R.id.kidMotherMobileTIET);
+        kidQuestion8TIET=(EditText) view.findViewById(R.id.kidQuestion8TIET);
+        kidQuestion9TIET=(EditText) view.findViewById(R.id.kidQuestion9TIET);
 
         kidQuestion1=(CheckBox)view.findViewById(R.id.kidQuestion1);
         kidQuestion2=(CheckBox)view.findViewById(R.id.kidQuestion2);
@@ -81,6 +88,25 @@ public class KidAdd extends Fragment {
         kidBusChoice=(RadioGroup)view.findViewById(R.id.kidBusChoice);
         kidStudPeriChoice=(RadioGroup)view.findViewById(R.id.kidStudPeriChoice);
 
+        kidImg=(ImageView)view.findViewById(R.id.kidImg);
+
+        kidImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(openCamera,200);
+
+            }
+        });
+
         return view;
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 200 && resultCode == RESULT_OK){
+            Bundle bundle = data.getExtras();
+            img = (Bitmap)bundle.get("data");
+            kidImg.setImageBitmap(img);
+        }
     }
 }
